@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="col">
+		<p> Use this form to add contacts </p>
+		<form>
+			<input type="text" class="txt" name="name" placeholder="Name" [(ngModel)]="goalText">
+			<input type="submit" class="btn" [value]="btnText" (click)="addContact()">
+		</form>
+	</div>
+</div>
+
+<div class="container">
+	<div>
+		<p> New Contacts ({{ itemCount }}) </p>
+	</div>
+</div>
+	
+<div *ngFor="let goal of goals">
+	<div class="border">
+	<div class="avatar"></div>
+		<p> {{ goal }} </p>
+	
+	</div>
+</div>
+
+
+
+
